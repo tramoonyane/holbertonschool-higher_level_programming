@@ -2,7 +2,7 @@
 """Defines a class-checking function."""
 
 
-def is_same_class(obj, a_class):
+def inherits_from(obj, a_class):
     """Check if an object is exactly an instance of a given class.
 
     Args:
@@ -12,4 +12,4 @@ def is_same_class(obj, a_class):
         If obj is exactly an instance of a_class - True.
         Otherwise - False.
     """
-    return type(obj) is a_class or issubclass(type(obj), a_class)
+     return isinstance(obj, type) and issubclass(obj, a_class)
