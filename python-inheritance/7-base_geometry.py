@@ -3,7 +3,6 @@ class BaseGeometry:
 
     def integer_validator(self, name, value):
         """Validates that the value is a positive integer."""
-        print(f"Called integer_validator with name={name}, value={value}")
         if not isinstance(value, int):
             raise TypeError(f"{name} must be an integer")
         elif value <= 0:
