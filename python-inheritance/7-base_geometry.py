@@ -11,8 +11,5 @@ class BaseGeometry:
         if isinstance(value, bool):
             raise TypeError(f"{name} must be a boolean, not an integer")
 
-        # Additional conditions can be added here as needed
-        # ...
-
-    def area(self):
-        raise Exception("area() is not implemented")
+        if value is not None and not isinstance(value, (int, bool)):
+            raise TypeError(f"{name} must be an integer or boolean, not {type(value).__name__}")
