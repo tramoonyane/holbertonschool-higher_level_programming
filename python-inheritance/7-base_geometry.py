@@ -23,7 +23,7 @@ class BaseGeometry:
             value (int): The value to be validated.
 
         Raises:
-            TypeError: If the value is not an integer.
+            TypeError: If the value is not an integer with a custom message.
             ValueError: If the value is less than or equal to 0.
         """
         if not isinstance(value, int):
