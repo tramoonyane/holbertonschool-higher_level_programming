@@ -10,4 +10,4 @@ class BaseGeometry:
 
     def area(self):
         """Placeholder method for calculating the area."""
-        raise NotImplementedError("area() must be implemented in subclasses")
+        raise Exception("area() is not implemented")
