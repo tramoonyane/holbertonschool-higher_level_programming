@@ -12,7 +12,7 @@ class BaseGeometry:
     """
     def area(self):
         """Placeholder for calculating the area."""
-        raise NotImplementedError("Subclasses must implement the area method")
+        raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
         """Validate the 'value' parameter as an integer."""
