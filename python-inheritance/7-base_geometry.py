@@ -1,5 +1,3 @@
-#!/usr/bin/python3
-
 class BaseGeometry:
     """
     Base class for geometric shapes.
@@ -16,6 +14,8 @@ class BaseGeometry:
 
     def integer_validator(self, name, value):
         """Validate the 'value' parameter as an integer."""
+        if not isinstance(name, str):
+            raise TypeError("name must be a string")
         if not isinstance(value, int):
             raise TypeError(f"{name} must be an integer")
         if value <= 0:
