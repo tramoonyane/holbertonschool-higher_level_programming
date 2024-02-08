@@ -1,27 +1,31 @@
-# 7-base_geometry.txt
+# 6-base_geometry.txt
 
-# Test Case 1: Valid Integer Input
->>> exec(open('7-main.py').read())
+# Test Case 1: area method not implemented
+>>> from 6-base_geometry import BaseGeometry
+>>> bg = BaseGeometry()
+>>> bg.area()
+Traceback (most recent call last):
+...
+Exception: area() is not implemented
+
+# Test Case 2: integer_validator method - Valid Integer Input
+>>> bg.integer_validator("my_int", 12)
 # (No output expected as there should be no exceptions)
 
-# Test Case 2: Invalid Integer Input (String)
->>> exec(open('7-main.py').read())
-[TypeError] must be an integer
+# Test Case 3: integer_validator method - Invalid Integer Input (String)
+>>> bg.integer_validator("name", "John")
+Traceback (most recent call last):
+...
+TypeError: name must be an integer
 
-# Test Case 3: Invalid Integer Input (Zero)
->>> exec(open('7-main.py').read())
-[ValueError] must be greater than 0
+# Test Case 4: integer_validator method - Invalid Integer Input (Zero)
+>>> bg.integer_validator("age", 0)
+Traceback (most recent call last):
+...
+ValueError: age must be greater than 0
 
-# Test Case 4: Invalid Integer Input (Negative)
->>> exec(open('7-main.py').read())
-[ValueError] must be greater than 0
-
-# Test Case 5: Valid Input (Mix of Valid and Invalid)
->>> exec(open('7-main.py').read())
-[TypeError] must be an integer
-[ValueError] must be greater than 0
-[ValueError] must be greater than 0
-
-# Test Case 6: Empty Input
->>> exec(open('7-main.py').read())
-# (No output expected as there should be no exceptions)
+# Test Case 5: integer_validator method - Invalid Integer Input (Negative)
+>>> bg.integer_validator("distance", -4)
+Traceback (most recent call last):
+...
+ValueError: distance must be greater than 0
