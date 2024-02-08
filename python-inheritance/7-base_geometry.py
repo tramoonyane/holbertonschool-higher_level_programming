@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 class BaseGeometry:
-    """Reprsent base geometry."""
+    """Represent base geometry."""
 
     def area(self):
         """Not yet implemented."""
@@ -13,10 +13,10 @@ class BaseGeometry:
             name (str): The name of the parameter.
             value (int): The parameter to validate.
         Raises:
-            TypeError: If value is not an integer.
+            TypeError: If value is not an integer or is None.
             ValueError: If value is <= 0.
         """
-        if not name or not value:
+        if not name or value is None:
             raise TypeError("integer_validator() missing 2 required positional arguments: 'name' and 'value'")
 
         if type(value) != int:
