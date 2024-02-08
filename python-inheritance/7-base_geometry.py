@@ -7,3 +7,7 @@ class BaseGeometry:
         """Validates that the value is an integer."""
         if not isinstance(value, int):
             raise TypeError(f"{name} must be an integer")
+
+    def area(self):
+        """Placeholder method for calculating the area."""
+        raise NotImplementedError("area() must be implemented in subclasses")
