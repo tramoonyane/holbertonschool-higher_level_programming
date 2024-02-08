@@ -1,8 +1,5 @@
 #!/usr/bin/python3
 
-"""Defines a base geometry class BaseGeometry."""
-
-
 class BaseGeometry:
     """Reprsent base geometry."""
 
@@ -19,6 +16,9 @@ class BaseGeometry:
             TypeError: If value is not an integer.
             ValueError: If value is <= 0.
         """
+        if not name or not value:
+            raise TypeError("integer_validator() missing 2 required positional arguments: 'name' and 'value'")
+
         if type(value) != int:
             raise TypeError("{} must be an integer".format(name))
         if value <= 0:
