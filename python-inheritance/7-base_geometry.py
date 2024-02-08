@@ -7,7 +7,7 @@ class BaseGeometry:
         if isinstance(value, int) and value <= 0:
             raise ValueError(f"{name} must be greater than 0")
         if isinstance(value, bool):
-            raise TypeError(f"{name} must be an integer")
+            raise TypeError(f"{name} must be an integer" if value else f"{name} must be a boolean")
 
     def area(self):
         raise Exception("area() is not implemented")
