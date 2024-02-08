@@ -33,3 +33,10 @@ class BaseGeometry:
         if value <= 0:
             raise ValueError(f"{name} must be greater than 0")
 if __name__ == "__main__":
+    # Placeholder test case
+    bg = BaseGeometry()
+    try:
+        bg.integer_validator("test", 42)
+        print("Test case passed!")
+    except Exception as e:
+        print(f"Test case failed: {e}")
