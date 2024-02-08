@@ -5,5 +5,5 @@ class BaseGeometry:
         if not isinstance(value, int):
             raise TypeError(f"{name} must be an integer")
 
-
-   
+    def area(self):
+        raise Exception("area() is not implemented")
