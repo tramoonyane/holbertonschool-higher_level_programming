@@ -1,8 +1,17 @@
 #!/usr/bin/python3
 
 """
-This module contains a function to insert a line of text to a file
-after each line containing a specific string.
+This module defines a function to insert a line of text into a file after each line
+containing a specific string.
+
+Functions:
+    - append_after(filename, search_string, new_string):
+        Inserts a line of text to a file after each line containing a specific string.
+
+        :param filename: The name of the file to be modified.
+        :param search_string: The string to search for in each line.
+        :param new_string: The string to be inserted after each line containing the search string.
+        :return: None
 """
 
 def append_after(filename="", search_string="", new_string=""):
