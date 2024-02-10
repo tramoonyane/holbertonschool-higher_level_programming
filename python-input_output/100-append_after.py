@@ -6,6 +6,13 @@ after each line containing a specific string.
 """
 
 def append_after(filename="", search_string="", new_string=""):
+     """
+    Inserts a line of text to a file after each line containing a specific string.
+
+    :param filename: The name of the file to be modified.
+    :param search_string: The string to search for in each line.
+    :param new_string: The string to be inserted after each line containing the search string.
+    """
     # Check if any of the parameters is missing
     if not filename or not search_string or not new_string:
         print("Please provide valid inputs for filename, search_string, and new_string.")
