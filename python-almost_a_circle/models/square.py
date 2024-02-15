@@ -25,7 +25,13 @@ class Square(Rectangle):
 
     def __str__(self):
         """
-        ...
+         Returns a string representation of the Square instance.
+
+    The string includes information about the Square's identity (id),
+    coordinates (x, y), and size (width).
+
+    Returns:
+        str: A string in the format '[Square] (id) x/y - size'.
         """
         return '[Square] ({:d}) {:d}/{:d} - {:d}'.format(
             self.id, self.x, self.y, self.width
