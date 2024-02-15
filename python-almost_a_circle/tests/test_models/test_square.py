@@ -5,9 +5,9 @@ of the Square class
 """
 import unittest
 import pep8
-from base import Base
-from rectangle import Rectangle
-from square import Square
+from models import square
+from models.base import Base
+Square = square.Square
 
 
 class TestSquare(unittest.TestCase):
