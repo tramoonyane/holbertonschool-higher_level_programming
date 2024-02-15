@@ -20,4 +20,12 @@ python3 -c 'print(__import__("base").save_to_file.__doc__)'
 
 python3 -c 'print(__import__("base").from_json_string.__doc__)'
 
-python3 -c 'print(__import__("base").__init__.__doc__)'
+python3 -c 'print(__import__("base").create.__doc__)'
+
+python3 -c 'print(__import__("base").create.__doc__)'
+
+python3 -c 'print(__import__("base").create.__doc__)'
+
+python3 -c 'print(__import__("base").create.__doc__)'
+
+python3 -c 'print(__import__("base").create.__doc__)'
