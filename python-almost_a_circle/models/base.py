@@ -20,9 +20,9 @@ class Base:
     def __init__(self, id=None):
         """Initialize a new Base.
 
-        Args:
-            id (int): The identity of the new Base.
-        """
+    Args:
+        id (int, optional): The identity of the new Base. Defaults to None.
+    """
         if id is not None:
             self.id = id
         else:
