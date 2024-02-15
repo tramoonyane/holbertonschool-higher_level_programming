@@ -6,4 +6,4 @@ python3 -c 'print(__import__("base").Base.__doc__)'
 
 python3 -c 'print(__import__("rectangle").__doc__)'
 
-python3 -c 'print(__import__("rectangle").Rectangle__doc__)'
+python3 -c 'print(__import__("rectangle").Rectangle.__doc__)'
