@@ -1,9 +1,8 @@
 #!/usr/bin/python3
 
-
+"""Defines a rectangle class."""
 from .base import Base
 
-"""Defines a rectangle class."""
 class Rectangle(Base):
     """Represent a rectangle."""
 
