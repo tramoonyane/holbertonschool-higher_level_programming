@@ -6,7 +6,7 @@ of the Base class
 import unittest
 import pep8
 import os
-from models import base
+from models.base import base
 from models.rectangle import Rectangle
 Base = base.Base
 
