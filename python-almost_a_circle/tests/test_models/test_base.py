@@ -7,7 +7,6 @@ import unittest
 import pep8
 import os
 from models import base
-from rectangle import Rectangle
 Base = base.Base
 
 
