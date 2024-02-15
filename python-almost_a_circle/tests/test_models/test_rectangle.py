@@ -20,6 +20,7 @@ import sys
 import unittest
 from models import rectangle
 from models.base import Base
+from models.rectangle import Rectangle
 Rectangle = rectangle.Rectangle
 
 class TestRectangle_instantiation(unittest.TestCase):
