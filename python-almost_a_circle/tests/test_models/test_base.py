@@ -18,7 +18,7 @@ class TestBaseClass(unittest.TestCase):
 
     def test_float_type(self):
         self.assertEqual(6.7, Base(6.7).id)
-    
+
     def test_nb_instances(self):
         with self.assertRaises(AttributeError):
             print(Base(39).__nb__instances)
