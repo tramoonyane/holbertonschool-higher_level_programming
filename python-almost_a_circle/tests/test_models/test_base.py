@@ -6,8 +6,8 @@ of the Base class
 import unittest
 import pep8
 import os
-from models.base import base
-from models.rectangle import Rectangle
+from models import base
+from rectangle import Rectangle
 Base = base.Base
 
 
