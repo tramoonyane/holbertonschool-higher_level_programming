@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 # test_rectangle.py
-# Brennan D Baraban <375@holbertonschool.com>
+
 """Defines unittests for models/rectangle.py.
 
 Unittest classes:
@@ -18,8 +18,8 @@ Unittest classes:
 import io
 import sys
 import unittest
-from models.base import Base
-from models.rectangle import Rectangle
+from base import Base
+from rectangle import Rectangle
 
 
 class TestRectangle_instantiation(unittest.TestCase):
