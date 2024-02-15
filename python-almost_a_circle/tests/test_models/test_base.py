@@ -8,8 +8,7 @@ import pep8
 import os
 from models import base
 Base = base.Base
-from models.rectangle import Rectangle
-from models.square import Square
+
 
 
 class TestBase(unittest.TestCase):
