@@ -28,4 +28,4 @@ python3 -c 'print(__import__("base").save_to_file_csv.__doc__)'
 
 python3 -c 'print(__import__("base").load_from_file_csv.__doc__)'
 
-python3 -c 'print(__import__("base").create.__doc__)'
+python3 -c 'print(__import__("base").draw.__doc__)'
