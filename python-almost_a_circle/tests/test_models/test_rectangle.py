@@ -18,9 +18,9 @@ Unittest classes:
 import io
 import sys
 import unittest
-from base import Base
-from rectangle import Rectangle
-
+from models import rectangle
+from models.base import Base
+Rectangle = rectangle.Rectangle
 
 class TestRectangle_instantiation(unittest.TestCase):
     """Unittests for testing instantiation of the Rectangle class."""
