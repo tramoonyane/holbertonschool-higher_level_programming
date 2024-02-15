@@ -10,4 +10,4 @@ python3 -c 'print(__import__("rectangle").Rectangle.__doc__)'
 
 python3 -c 'print(__import__("square").__doc__)'
 
-python3 -c 'print(__import__("square").Base.__doc__)'
+python3 -c 'print(__import__("square").Square.__doc__)'
