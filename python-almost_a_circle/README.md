@@ -22,7 +22,7 @@ python3 -c 'print(__import__("base").from_json_string.__doc__)'
 
 python3 -c 'print(__import__("base").create.__doc__)'
 
-python3 -c 'print(__import__("base").create.__doc__)'
+python3 -c 'print(__import__("base").load_from_file.__doc__)'
 
 python3 -c 'print(__import__("base").create.__doc__)'
 
