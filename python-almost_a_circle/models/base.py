@@ -21,7 +21,7 @@ class Base:
         """Initialize a new Base.
 
     Args:
-        id (int, optional): The identity of the new Base. Defaults to None.
+        id (int, optional): The identity of the new Base.
     """
         if id is not None:
             self.id = id
