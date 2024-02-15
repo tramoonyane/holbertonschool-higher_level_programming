@@ -7,9 +7,8 @@ import unittest
 import pep8
 import os
 from models import base
-from models.rectangle import Rectangle
 Base = base.Base
-
+from models.rectangle import Rectangle
 
 
 class TestBase(unittest.TestCase):
