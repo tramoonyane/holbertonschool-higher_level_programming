@@ -198,10 +198,6 @@ class TestBase_instantiation(unittest.TestCase):
         self.assertEqual(True, Base(True).id)
 
 
-   def test_bool_id(self):
-        self.assertEqual(True, Base(True).id)
-
-
     def test_tuple_id(self):
         self.assertEqual((1, 2), Base((1, 2)).id)
 
