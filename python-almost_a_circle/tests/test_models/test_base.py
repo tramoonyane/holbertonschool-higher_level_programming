@@ -264,7 +264,7 @@ class TestBase_load_from_file(unittest.TestCase):
         self.assertEqual(str(r1), str(list_rectangles_output[0]))
 
 
-def test_load_from_file_second_rectangle(self):
+    def test_load_from_file_second_rectangle(self):
         r1 = Rectangle(10, 7, 2, 8, 1)
         r2 = Rectangle(2, 4, 5, 6, 2)
         Rectangle.save_to_file([r1, r2])
@@ -309,7 +309,7 @@ def test_load_from_file_second_rectangle(self):
         self.assertEqual([], output)
 
 
-def test_load_from_file_more_than_one_arg(self):
+    def test_load_from_file_more_than_one_arg(self):
         with self.assertRaises(TypeError):
             Base.load_from_file([], 1)
 
@@ -338,7 +338,7 @@ class TestBase_load_from_file_csv(unittest.TestCase):
         list_rectangles_output = Rectangle.load_from_file_csv()
 
 
-self.assertEqual(str(r1), str(list_rectangles_output[0]))
+        self.assertEqual(str(r1), str(list_rectangles_output[0]))
 
 
     def test_load_from_file_csv_second_rectangle(self):
@@ -412,7 +412,7 @@ class TestBase_save_to_file(unittest.TestCase):
             pass
 
 
-def test_save_to_file_one_rectangle(self):
+   def test_save_to_file_one_rectangle(self):
         r = Rectangle(10, 7, 2, 8, 5)
         Rectangle.save_to_file([r])
         with open("Rectangle.json", "r") as f:
@@ -458,7 +458,7 @@ def test_save_to_file_one_rectangle(self):
             self.assertTrue(len(f.read()) == 39)
 
 
-def test_save_to_file_None(self):
+    def test_save_to_file_None(self):
         Square.save_to_file(None)
         with open("Square.json", "r") as f:
             self.assertEqual("[]", f.read())
@@ -531,7 +531,7 @@ class TestBase_save_to_file_csv(unittest.TestCase):
             self.assertTrue("8,10,7,2\n3,8,1,2", f.read())
 
 
-def test_save_to_file__csv_cls_name(self):
+    def test_save_to_file__csv_cls_name(self):
         s = Square(10, 7, 2, 8)
         Base.save_to_file_csv([s])
         with open("Base.csv", "r") as f:
