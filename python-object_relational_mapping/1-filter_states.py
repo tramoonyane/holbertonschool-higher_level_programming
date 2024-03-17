@@ -27,7 +27,7 @@ def filter_states(username, password, database):
             db=database
         )
         cursor = db.cursor()
-        cursor.execute("SELECT * FROM states "
+        cursor.execute("SELECT * FROM states\
                        "WHERE name LIKE 'N%' ORDER BY id ASC")
         states = cursor.fetchall()
         for state in states:
