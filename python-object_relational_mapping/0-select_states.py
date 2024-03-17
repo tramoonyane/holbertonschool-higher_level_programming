@@ -6,10 +6,12 @@ Script to list all states from the database hbtn_0e_0_usa.
 import MySQLdb
 import sys
 
+
 def list_states(username, password, database):
     """
-    Connects to the MySQL server and lists all states from the specified database.
-    
+    Connects to the MySQL server and lists all states from
+    the specified database.
+
     Args:
         username (str): MySQL username.
         password (str): MySQL password.
@@ -32,6 +34,7 @@ def list_states(username, password, database):
         db.close()
     except MySQLdb.Error as e:
         print("MySQL Error:", e)
+
 
 if __name__ == "__main__":
     if len(sys.argv) == 4:
