@@ -9,7 +9,8 @@ import sys
 
 def list_states(username, password, database):
     """
-    Connects to the MySQL server and lists all states from the specified database.
+    Connects to the MySQL server and lists all states from
+    the specified database.
 
     Args:
         username (str): MySQL username.
