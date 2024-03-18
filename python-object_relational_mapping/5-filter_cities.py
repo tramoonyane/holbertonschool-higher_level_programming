@@ -26,7 +26,7 @@ def filter_cities_by_state(username, password, database, state_name):
         )
         cursor = db.cursor()
         query = """
-            SELECT GROUP_CONCAT(name SEPARATOR ', ')
+            SELECT cities.name
             FROM cities
             INNER JOIN states ON cities.state_id = states.id
             WHERE states.name = %s
