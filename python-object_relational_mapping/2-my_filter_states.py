@@ -8,6 +8,7 @@ where name matches the provided argument.
 import MySQLdb
 import sys
 
+
 def filter_states_by_name(username, password, database, state_name):
     """
     Connects to the MySQL server and displays
@@ -49,4 +50,7 @@ if __name__ == "__main__":
             sys.argv[4]
         )
     else:
-        print("Usage: ./2-my_filter_states.py <username> <password> <database> <state_name>")
+        print("""
+        Usage: ./2-my_filter_states.py <username> <password> <database>
+        <state_name>
+        """)
