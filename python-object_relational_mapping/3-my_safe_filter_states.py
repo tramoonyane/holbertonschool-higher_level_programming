@@ -49,5 +49,7 @@ if __name__ == "__main__":
             sys.argv[4]
         )
     else:
-        print("""Usage: ./3-my_safe_filter_states.py
-        <username> <password> <database> <state_name>""")
+        print("""
+        Usage: ./3-my_safe_filter_states.py
+        <username> <password> <database> <state_name>
+        """)
