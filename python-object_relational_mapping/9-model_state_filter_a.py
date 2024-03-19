@@ -31,15 +31,16 @@ def filter_states_with_a(username, password, database):
         Base.metadata.create_all(engine)
         Session = sessionmaker(bind=engine)
         session = Session()
-        
+
         # Query all State objects containing the letter 'a' and display them
         states_with_a = session.query(State).filter(State.name.like('%a%')).order_by(State.id).all()
         for state in states_with_a:
             print("{}: {}".format(state.id, state.name))
-        
+
         session.close()
     except Exception as e:
         print("Error:", e)
+
 
 if __name__ == "__main__":
     if len(sys.argv) == 4:
