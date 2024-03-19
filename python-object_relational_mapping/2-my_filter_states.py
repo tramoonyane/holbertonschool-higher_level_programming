@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-Script to display all values in the states table of hbtn_0e_0_usa where name matches the argument.
+Script to display all values in the states table
+of hbtn_0e_0_usa where name matches the argument.
 """
 
 import MySQLdb
@@ -8,7 +9,8 @@ import sys
 
 def filter_states_by_name(username, password, database, state_name):
     """
-    Connects to the MySQL server and displays all values in the states table where name matches the argument.
+    Connects to the MySQL server and displays all values
+    in the states table where name matches the argument.
     
     Args:
         username (str): MySQL username.
@@ -25,7 +27,8 @@ def filter_states_by_name(username, password, database, state_name):
             db=database
         )
         cursor = db.cursor()
-        query = "SELECT * FROM states WHERE name = '{}' ORDER BY id ASC".format(state_name)
+        query = """"SELECT * FROM states WHERE name = '{}'
+                    ORDER BY id ASC".format(state_name""")
         cursor.execute(query)
         states = cursor.fetchall()
         for state in states:
