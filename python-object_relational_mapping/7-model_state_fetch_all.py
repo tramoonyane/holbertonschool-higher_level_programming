@@ -8,10 +8,11 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from model_state import Base, State
 
+
 def fetch_all_states(username, password, database):
     """
     Connects to the MySQL server and lists all State objects from the specified database.
-    
+
     Args:
         username (str): MySQL username.
         password (str): MySQL password.
@@ -24,15 +25,16 @@ def fetch_all_states(username, password, database):
         Base.metadata.create_all(engine)
         Session = sessionmaker(bind=engine)
         session = Session()
-        
+
         # Query all State objects and display them
         states = session.query(State).order_by(State.id).all()
         for state in states:
             print("{}: {}".format(state.id, state.name))
-        
+
         session.close()
     except Exception as e:
         print("Error:", e)
+
 
 if __name__ == "__main__":
     if len(sys.argv) == 4:
