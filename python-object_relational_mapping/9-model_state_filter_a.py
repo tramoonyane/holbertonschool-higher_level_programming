@@ -46,4 +46,7 @@ if __name__ == "__main__":
     if len(sys.argv) == 4:
         filter_states_with_a(sys.argv[1], sys.argv[2], sys.argv[3])
     else:
-        print("Usage: ./9-model_state_filter_a.py <username> <password> <database>")
+        print("""
+        Usage: ./9-model_state_filter_a.py <username> <password>
+        <database>
+        """)
