@@ -11,7 +11,8 @@ from model_state import Base, State
 
 def fetch_all_states(username, password, database):
     """
-    Connects to the MySQL server and lists all State objects from the specified database.
+    Connects to the MySQL server and lists
+    all State objects from the specified database.
 
     Args:
         username (str): MySQL username.
@@ -20,7 +21,8 @@ def fetch_all_states(username, password, database):
     """
     try:
         # Connect to the MySQL server
-        engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.format(username, password, database),
+        engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.\
+                               format(username, password, database),
                                pool_pre_ping=True)
         Base.metadata.create_all(engine)
         Session = sessionmaker(bind=engine)
@@ -40,4 +42,7 @@ if __name__ == "__main__":
     if len(sys.argv) == 4:
         fetch_all_states(sys.argv[1], sys.argv[2], sys.argv[3])
     else:
-        print("Usage: ./7-model_state_fetch_all.py <username> <password> <database>")
+        print("""
+        Usage: ./7-model_state_fetch_all.py <username> <password>
+        <database>
+        """)
