@@ -25,7 +25,8 @@ def fetch_all_states(username, password, database):
             'mysql+mysqldb://{}:{}@localhost:3306/{}'.format(
                 username, password, database
             ),
-                               pool_pre_ping=True)
+            pool_pre_ping=True
+        )
         Base.metadata.create_all(engine)
         Session = sessionmaker(bind=engine)
         session = Session()
