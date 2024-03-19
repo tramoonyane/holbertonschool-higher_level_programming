@@ -30,24 +30,24 @@ def filter_states_by_name(username, password, database, state_name):
             db=database
         )
         # Create a cursor object
-    cursor = conn.cursor()
+        cursor = conn.cursor()
 
-    # SQL query with user input using format
-    query = "SELECT * FROM states WHERE name LIKE '{}%'\
-    ORDER BY id ASC".format(state_name)
+        # SQL query with user input using format
+        query = "SELECT * FROM states WHERE name LIKE '{}%'\
+        ORDER BY id ASC".format(state_name)
 
-    # Execute the query
-    cursor.execute(query)
+        # Execute the query
+        cursor.execute(query)
 
-    # Fetch all the matching rows
-    rows = cursor.fetchall()
+        # Fetch all the matching rows
+        rows = cursor.fetchall()
 
-    # Display the results
-    for row in rows:
-        print(row)
+        # Display the results
+        for row in rows:
+            print(row)
 
-    # Close the connection
-    conn.close()
+        # Close the connection
+        conn.close()
 
 
 if __name__ == "__main__":
