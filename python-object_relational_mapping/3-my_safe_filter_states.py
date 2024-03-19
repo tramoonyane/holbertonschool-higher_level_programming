@@ -7,9 +7,11 @@ while preventing MySQL injections.
 import MySQLdb
 import sys
 
+
 def safe_filter_states_by_name(username, password, database, state_name):
     """
-    Connects to the MySQL server and displays all values in the states table where name matches the argument.
+    Connects to the MySQL server and displays all values
+    in the states table where name matches the argument.
     Prevents MySQL injections by using parameterized queries.
     
     Args:
@@ -36,6 +38,7 @@ def safe_filter_states_by_name(username, password, database, state_name):
         db.close()
     except MySQLdb.Error as e:
         print("MySQL Error:", e)
+
 
 if __name__ == "__main__":
     if len(sys.argv) == 5:
