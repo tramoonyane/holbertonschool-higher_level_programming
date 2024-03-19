@@ -10,6 +10,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from model_state import Base, State
 
+
 def delete_states_with_a(username, password, database):
     """
     Connects to the MySQL server and deletes all State
