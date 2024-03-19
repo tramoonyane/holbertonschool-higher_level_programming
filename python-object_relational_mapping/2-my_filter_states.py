@@ -63,4 +63,4 @@ if __name__ == "__main__":
         sys.exit(1)
 
     username, password, database, state_name = sys.argv[1:]
-    display_states_by_name(username, password, database, state_name)
+    filter_states_by_name(username, password, database, state_name)
