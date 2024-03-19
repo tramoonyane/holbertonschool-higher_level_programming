@@ -33,7 +33,7 @@ def filter_states_by_name(username, password, database, state_name):
     cursor = conn.cursor()
 
     # SQL query with user input using format
-    query = "SELECT * FROM states WHERE name LIKE '{}%'
+    query = "SELECT * FROM states WHERE name LIKE '{}%'\
     ORDER BY id ASC".format(state_name)
 
     # Execute the query
