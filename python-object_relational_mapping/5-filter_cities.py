@@ -40,17 +40,17 @@ def filter_cities(username, password, database, state_name):
                        "JOIN states ON cities.state_id = states.id "
                        "WHERE states.name = %s "
                        "ORDER BY cities.id ASC", (state_name,))
-        
+
         # Fetch all results
         rows = cursor.fetchall()
-        
+
         # Extract city names from results
         cities = [row[0] for row in rows]
 
         # Close cursor and database connection
         cursor.close()
         db.close()
-        
+
     except MySQLdb.Error as e:
         print("MySQL Error:", e)
 
