@@ -1,10 +1,12 @@
 #!/usr/bin/python3
 """
-Script to list all cities of a specified state from the database hbtn_0e_4_usa.
+Script to list all cities of a specified state
+from the database hbtn_0e_4_usa.
 """
 
 import MySQLdb
 import sys
+
 
 def filter_cities(username, password, database, state_name):
     """
@@ -54,10 +56,14 @@ def filter_cities(username, password, database, state_name):
 
     return cities
 
+
 if __name__ == "__main__":
     # Check if correct number of arguments is provided
     if len(sys.argv) != 5:
-        print("Usage: ./5-filter_cities.py <username> <password> <database> <state_name>")
+        print("""
+        Usage: ./5-filter_cities.py <username>
+        <password> <database> <state_name>
+        """)
         sys.exit(1)
 
     username, password, database, state_name = sys.argv[1:]
