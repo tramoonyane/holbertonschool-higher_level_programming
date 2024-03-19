@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-Script to display all values in the states table of hbtn_0e_0_usa where name matches the argument,
+Script to display all values in the states table
+of hbtn_0e_0_usa where name matches the argument,
 while preventing MySQL injections.
 """
 
@@ -13,7 +14,7 @@ def safe_filter_states_by_name(username, password, database, state_name):
     Connects to the MySQL server and displays all values
     in the states table where name matches the argument.
     Prevents MySQL injections by using parameterized queries.
-    
+
     Args:
         username (str): MySQL username.
         password (str): MySQL password.
