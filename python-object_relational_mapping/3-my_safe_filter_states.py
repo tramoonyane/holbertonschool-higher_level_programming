@@ -42,6 +42,12 @@ def safe_filter_states_by_name(username, password, database, state_name):
 
 if __name__ == "__main__":
     if len(sys.argv) == 5:
-        safe_filter_states_by_name(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4])
+        safe_filter_states_by_name(
+            sys.argv[1],
+            sys.argv[2],
+            sys.argv[3],
+            sys.argv[4]
+        )
     else:
-        print("Usage: ./3-my_safe_filter_states.py <username> <password> <database> <state_name>")
+        print("""Usage: ./3-my_safe_filter_states.py
+        <username> <password> <database> <state_name>""")
