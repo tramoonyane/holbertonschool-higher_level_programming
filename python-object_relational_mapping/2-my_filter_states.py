@@ -45,6 +45,10 @@ def filter_states_by_name(username, password, database, state_name):
         # Display the results
         for row in rows:
             print(row)
+      except MySQLdb.Error as e:
+        print("MySQL Error:", e)
+    
+    finally:      
 
         # Close the connection
         conn.close()
