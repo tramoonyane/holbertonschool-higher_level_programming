@@ -7,6 +7,7 @@ of hbtn_0e_0_usa where name matches the argument.
 import MySQLdb
 import sys
 
+
 def filter_states_by_name(username, password, database, state_name):
     """
     Connects to the MySQL server and displays all values
@@ -37,6 +38,7 @@ def filter_states_by_name(username, password, database, state_name):
         db.close()
     except MySQLdb.Error as e:
         print("MySQL Error:", e)
+
 
 if __name__ == "__main__":
     if len(sys.argv) == 5:
