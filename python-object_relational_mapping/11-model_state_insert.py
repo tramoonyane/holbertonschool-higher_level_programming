@@ -14,7 +14,7 @@ def insert_state(username, password, database):
     """
     Connects to the MySQL server and adds the State
     object "Louisiana" to the specified database.
-    
+
     Args:
         username (str): MySQL username.
         password (str): MySQL password.
