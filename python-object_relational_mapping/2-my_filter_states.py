@@ -6,7 +6,7 @@ where name matches the provided argument.
 """
 
 import MySQLdb
-from sys import argv
+import sys
 
 
 def filter_states_by_name(username, password, database, state_name):
@@ -31,7 +31,7 @@ def filter_states_by_name(username, password, database, state_name):
         )
         cursor = db.cursor()
         query = """SELECT * FROM states WHERE name = '{}' \
-                   ORDER BY id ASC""".format(argv[4])
+                   ORDER BY id ASC""".format(state_name)
         cursor.execute(query)
         states = cursor.fetchall()
         for state in states:
