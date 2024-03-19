@@ -29,29 +29,32 @@ def filter_states_by_name(username, password, database, state_name):
             passwd=password,
             db=database
         )
-        cursor = db.cursor()
-        query = "SELECT * FROM states WHERE name = '{}' \
-                   ORDER BY id ASC".format(sys.argv[4])
-        cursor.execute(query)
-        states = cursor.fetchall()
-        for state in states:
-            print(state)
-        cursor.close()
-        db.close()
-    except MySQLdb.Error as e:
-        print("MySQL Error:", e)
+        # Create a cursor object
+    cursor = conn.cursor()
+
+    # SQL query with user input using format
+    query = "SELECT * FROM states WHERE name LIKE '{}%'
+    ORDER BY id ASC".format(state_name)
+
+    # Execute the query
+    cursor.execute(query)
+
+    # Fetch all the matching rows
+    rows = cursor.fetchall()
+
+    # Display the results
+    for row in rows:
+        print(row)
+
+    # Close the connection
+    conn.close()
 
 
 if __name__ == "__main__":
-    if len(sys.argv) == 5:
-        filter_states_by_name(
-            sys.argv[1],
-            sys.argv[2],
-            sys.argv[3],
-            sys.argv[4]
-        )
-    else:
-        print("""
-        Usage: ./2-my_filter_states.py <username> <password> <database>
-        <state_name>
-        """)
+    if len(sys.argv) != 5:
+        print("Usage: python script.py <username> <password>
+        <database> <state_name>")
+        sys.exit(1)
+
+    username, password, database, state_name = sys.argv[1:]
+    display_states_by_name(username, password, database, state_name)
