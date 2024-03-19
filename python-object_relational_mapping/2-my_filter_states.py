@@ -44,4 +44,7 @@ if __name__ == "__main__":
     if len(sys.argv) == 5:
         filter_states_by_name(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4])
     else:
-        print("Usage: ./2-my_filter_states.py <username> <password> <database> <state_name>")
+        print("""
+        Usage: ./2-my_filter_states.py <username> <password>
+        <database> <state_name>
+        """)
