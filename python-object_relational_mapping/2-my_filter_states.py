@@ -12,7 +12,7 @@ def filter_states_by_name(username, password, database, state_name):
     """
     Connects to the MySQL server and displays all values
     in the states table where name matches the argument.
-    
+
     Args:
         username (str): MySQL username.
         password (str): MySQL password.
