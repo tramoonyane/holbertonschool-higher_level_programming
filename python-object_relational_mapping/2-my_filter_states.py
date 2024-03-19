@@ -28,15 +28,21 @@ def filter_states_by_name(username, password, database, state_name):
             db=database
         )
         cursor = db.cursor()
-        query = """SELECT * FROM states WHERE name = '{}' \
-                   ORDER BY id ASC""".format(state_name)
-        cursor.execute(query)
+        # Prepare the SQL query with parameterized query
+        query = "SELECT * FROM states WHERE name = %s ORDER BY id ASC"
+        cursor.execute(query, (state_name,))
+
+        # Fetch and display results
         states = cursor.fetchall()
         for state in states:
             print(state)
+
+        # Close cursor and database connection
         cursor.close()
         db.close()
+
     except MySQLdb.Error as e:
+        # Print a more informative error message
         print("MySQL Error:", e)
 
 
